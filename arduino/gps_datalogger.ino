@@ -1,12 +1,3 @@
-/***************************************************************************
-* Arduino Xiao GPS Datalogger 
-* -- using ATGM336H + SD Module
-*
-* 
-*  by Josh Hrisko | Maker Portal LLC (c) 2021
-* 
-* 
-***************************************************************************/
 #include <SPI.h>
 #include <SD.h>
 #include <TinyGPS++.h>
