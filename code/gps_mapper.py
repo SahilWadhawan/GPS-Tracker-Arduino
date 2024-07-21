@@ -1,13 +1,3 @@
-##################################################
-#
-# Mapping GPS data acquired by Arduino 
-# -- using cartopy to visualize lat/lon points
-#
-# by Joshua Hrisko | Maker Portal LLC (c) 2021
-#
-##################################################
-#
-#
 import csv
 import numpy as np
 import cartopy.crs as ccrs
@@ -53,7 +43,7 @@ for row in arduino_data[1:]:
 #######################################
 # Formatting the Cartopy plot
 #######################################
-#
+
 cimgt.GoogleTiles.get_image = image_spoof # reformat web request for street map spoofing
 osm_img = cimgt.GoogleTiles() # spoofed, downloaded street map
 
@@ -80,7 +70,6 @@ ax1.add_image(osm_img, int(scale+1)) # add OSM with zoom specification
 #######################################
 # Plot the GPS points
 #######################################
-#
 
 for ii in range(0,len(lons),10):
     ax1.plot(lons[ii],lats[ii], markersize=10,marker='o',linestyle='',
